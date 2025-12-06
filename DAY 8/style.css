@@ -1,0 +1,29 @@
+input[type="password"]{
+    background-color: pink;
+    font-style: italic;
+}
+
+button:hover{
+    background-color: purple;
+    color: white;
+
+}
+
+input::placeholder{
+    color: pink;
+    font-style: italic;
+}
+
+div[class="box"]{
+        border-style: solid;
+        border-width: 2px;
+        padding: 2px;
+        background-color: rgb(189, 157, 231);
+        border-color: black;
+        border-right: 200px;
+        align-content: center;
+        justify-content: center;
+        width: 500px;
+        margin: 20px;
+        
+}
