@@ -1,0 +1,33 @@
+
+.car{
+    background:white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+    justify-content: center;
+    
+}
+.car:hover {
+    border: 2px solid #000;
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15)
+}
+body{
+    margin: 0%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:pink;
+
+}
+h3,p {
+    justify-content: center;
+    align-items: center;
+    font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
+
+}
