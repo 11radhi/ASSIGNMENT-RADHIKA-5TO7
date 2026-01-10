@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    height: 150px;
+    border: 2px dashed #999;
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: red;
+
+     animation-name: moveBox;
+     animation-duration: 4s;
+     animation-delay: 1s;              
+     animation-iteration-count: infinite; 
+     animation-timing-function: linear;
+}
+
+        
+.box:hover {
+    animation-play-state: paused;
+}
+
+       
+@keyframes moveBox {
+    0% {
+        left: 0;
+        background: red;
+    }
+    50% {
+        background: orange;
+    }
+    100% {
+        left: calc(100% - 80px);
+        background: green;
+    }
+}
