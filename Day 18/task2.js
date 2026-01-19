@@ -115,38 +115,20 @@ checkAccess(userRole);
 
 //Write a discount checker for an e-commerce site
 
-function calculateDiscount(originalPrice, discountPercentage) {
-    if (typeof originalPrice !== 'number' || originalPrice < 0) {
-        return "Invalid price";
-    }
-    if (typeof discountPercentage !== 'number' || discountPercentage < 0 || discountPercentage > 100) {
-        return originalPrice;
-    }
+let amount =3000;
 
-    const discountAmount = (originalPrice * discountPercentage) / 100;
-    const finalPrice = originalPrice - discountAmount;
+if(amount>=2500){
+    console.log('Discount of 30%');}
+    else
+         if(amount>=1500){
+        console.log('Discount of 20%');}
+        else {
+            console.log('Discount of 10%');
+            
+        }
+        
     
-    return finalPrice.toFixed(2); 
-}
-
-const itemPrice = 200; 
-const discountRate = 25; 
-
-const finalPrice = calculateDiscount(itemPrice, discountRate);
-
-console.log(`Original Price: $${itemPrice.toFixed(2)}`);
-console.log(`Discount Applied: ${discountRate}%`);
-console.log(`Final Price: $${finalPrice}`);
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
