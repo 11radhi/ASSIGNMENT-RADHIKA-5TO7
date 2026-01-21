@@ -86,6 +86,30 @@ function factorialIterative(n) {
 console.log(`The factorial of 5 is: ${factorialIterative(5)}`); 
 console.log(`The factorial of 10 is: ${factorialIterative(10)}`); 
 
+//Menu Program using functions
+
+function menu(choice){
+    switch(choice){
+        case 1:
+        console.log('option 1');
+        break;
+        case 2:
+        console.log('option 2');
+        break;
+        case 3:
+        console.log('option 3');
+        break;
+        default:
+        console.log('invalid option');     
+        
+    }
+}
+
+menu(1);
+menu(3);
+menu(2);
+menu();
+
 
 
 
