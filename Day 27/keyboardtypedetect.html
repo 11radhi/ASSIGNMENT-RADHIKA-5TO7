@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="typingBox" placeholder="Start typing here..." autofocus>
+
+  <div class="box">Last Key Pressed: <span id="lastKey">None</span></div>
+  <div class="box">Total Keystrokes: <span id="count">0</span></div>
+
+  <script>
+    let count = 0;
+
+    document.getElementById("typingBox").addEventListener("keydown", function(event) {
+      count++;
+      document.getElementById("lastKey").innerText = event.key;
+      document.getElementById("count").innerText = count;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+    <input type="text" id="name" placeholder="Enter name">
+    <div class="error" id="nameError"></div>
+
+    <input type="email" id="email" placeholder="Enter email">
+    <div class="error" id="emailError"></div>
+
+    <input type="password" id="password" placeholder="Enter password">
+    <div class="error" id="passwordError"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (e) {
+      e.preventDefault(); 
+      let valid = true;
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      document.getElementById("nameError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("passwordError").innerText = "";
+
+      if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+        valid = false;
+      }
+
+      if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required";
+        valid = false;
+      } else if (!email.includes("@")) {
+        document.getElementById("emailError").innerText = "Invalid email format";
+        valid = false;
+      }
+
+      if (password.length < 6) {
+        document.getElementById("passwordError").innerText =
+          "Password must be at least 6 characters";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Form submitted successfully ");
+        document.getElementById("myForm").reset();
+      }
+    });
+  </script>
+</body>
+</html>

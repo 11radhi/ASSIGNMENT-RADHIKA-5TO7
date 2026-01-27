@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .box {
+      padding: 30px;
+      border: 2px solid black;
+      cursor: pointer;
+    }
+
+    #grandparent { 
+        background: #ffb3b3; 
+    }
+    #parent { 
+        background: #b3d9ff;
+     }
+    #child { 
+        background: #b3ffcc;
+     }
+  </style>
+<body>
+    <div id="grandparent" class="box">
+    Grandparent
+        <div id="parent" class="box">
+      Parent
+            <div id="child" class="box">
+        Child
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+   
+    document.getElementById("grandparent").onclick = () => console.log("Grandparent clicked");
+    document.getElementById("parent").onclick = () => console.log("parent clicked");
+    document.getElementById("child").onclick = () => console.log("Gchild clicked");
+     
+
+    
+  </script>
+</body>
+</html>
