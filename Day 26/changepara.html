@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background-color: rgb(124, 80, 160);
+            font-weight: bolder;
+            justify-content: center;
+            font-family: cursive;
+            font-size: medium;
+            text-align: center; 
+        }
+
+         .btn{
+            background-color: black;
+            color: white;
+         }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p id="paragraph">
+            This is the original paragraph text
+        </p>
+
+        <button onclick="change()" class="btn">change the text</button>
+    </div>
+
+    <script>
+        // Change text of a paragraph
+
+function change(){
+
+    const changetext = document.getElementById('paragraph');
+
+    if(changetext){
+        changetext.innerText= 'The paragraph has been changed successfully';
+    }else{
+        console.log('Element not found');
+        
+    }
+}
+    </script>
+</body>
+</html>

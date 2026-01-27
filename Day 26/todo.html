@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="todoinput" placeholder="Enter task">
+
+    <button id="addbtn">Add</button>
+
+    <ul id="todolist"></ul>
+
+    <script>
+        // Dynamic Todo List
+
+const input =document.getElementById("todoinput");
+
+const button=document.getElementById("addbtn");
+
+const list=document.getElementById("todolist");
+
+button.addEventListener("click", function() {
+    const li=document.createElement("li");
+    li.textContent=input.value;
+    list.appendChild(li);
+    input.value= "";
+});
+    </script>
+</body>
+</html>

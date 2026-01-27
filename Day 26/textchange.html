@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="text">Hello, JS!</h2>
+        <button id="btn1">Change Text</button>
+    </div>
+
+ 
+    <script>
+        // Text Changer App (button click)
+
+const text = document.getElementById("text");
+
+const button = document.getElementById("btn1");
+
+button.addEventListener("click", () => {
+    text.textContent="Hello, JAVASCRIPT";
+});
+
+    </script>
+</body>
+</html>

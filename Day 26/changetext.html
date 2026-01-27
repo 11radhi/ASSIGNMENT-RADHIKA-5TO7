@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(202, 140, 217);
+            font-weight: bolder;
+            justify-content: center;
+            font-family: cursive;
+            font-size: medium;
+            text-align: center;
+        }
+
+        
+
+        .btn{
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <p id="greeting">Hello ,world !</p>
+
+    <button onclick="changegreeting()" class="btn">change text</button>
+
+    </div>
+
+    <ul id="myList">
+        <li>Initial Item 1</li>
+    </ul>
+        <button onclick="addItem()">Add New Item</button>
+
+    <script>
+        // Select an element using getElementById()
+
+function changegreeting(){
+
+    const greetelement=document.getElementById("greeting");
+
+    if(greetelement){
+
+        greetelement.innerText ='Hello , Javascript';
+    }    else{
+        console.log('Element not found');
+        
+    }
+}
+
+    </script>
+    
+</body>
+</html>
